@@ -1,22 +1,27 @@
 function onOpen() {
   var ui = DocumentApp.getUi();
-  var am = ui.createMenu('Big Red Button')
+  var br = ui.createMenu('Big Red Button')
     .addItem('Customizable Launch', 'customizable_Launch')
     .addItem('Crash', 'crash_Prompt')
-  
-  var fm = ui.createMenu('Memes')
+  var ig = ui.createMenu('Images&Gifs')
+    .addItem('Bingus', 'bingus_A')
+    .addItem('Amogus', 'amogus_A')
+    .addItem('Yodabird', 'yoda_A')
+    .addItem('OIIAII Cat', 'oiiaii_A')
+    .addItem('Maxwell', 'maxwell_A')
+    .addItem('Amogus?', 'amongtk_A')
+    .addItem('Seal', 'seal_A')
+  var cp = ui.createMenu('Copypastas')
     .addItem('Caught you in 8k', 'atek_Meme')
     .addItem('Fire', 'fire_Meme')
     .addItem('Mr Krabs', 'krabs_Meme')
     .addItem('The bee movie ', 'bee_Meme')
-    .addItem('Bingus', 'bingus_A')
-    .addItem('Amogus', 'amogus_A')
-
     ui.createMenu('Memer Package')
-    .addSubMenu(am)
+    .addSubMenu(br)
     .addSeparator()
-    .addSubMenu(fm)
-    .addToUi();
+    .addSubMenu(ig)
+    .addSubMenu(cp)
+    .addToUi()
 }
 
 function atek_Meme(){
@@ -35,12 +40,36 @@ function bee_Meme(){
   DocumentApp.getActiveDocument().getBody().appendParagraph("According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.")
 }
 
+function tail_Meme(){
+  DocumentApp.getActiveDocument().getBody().appendParagraph("I think everyone wishes humans had tails. Like imagine all the moms at walmart saying 'omg your hair is so pretty ;3' then you'd say thanks with a straight face but if we had a tail that shi would be waggin so fast. then she'll notice and be like 'aww look at you getting all excited for mommy' then you'd blush and get all embarresed and shi x3... yall feelin me on this shi?")
+}
+
 function bingus_A(){
   add_Image('https://i.kym-cdn.com/entries/icons/original/000/035/557/Hi_Bingus.png')
 }
 
 function amogus_A(){
   add_Image('https://static.wikia.nocookie.net/amogus/images/0/0b/Alongus3.png/revision/latest?cb=20210829155907')
+}
+
+function yoda_A(){
+  add_Image('https://static.wikia.nocookie.net/angrybirds/images/d/dc/Yoda_uhm.png/revision/latest?cb=20140225005318')
+}
+
+function amongtk_A(){
+  add_Image('https://i.pinimg.com/originals/86/f4/fb/86f4fb3a83bdca697b5f6c188c2a95ba.gif')
+}
+
+function oiiaii_A(){
+  add_Image('https://images.squarespace-cdn.com/content/v1/663f738a89dc02694adb8670/ab586c91-6b0b-4791-aa5a-b60824f92094/OIIA-Website-loop.gif')
+}
+
+function maxwell_A(){
+  add_Image('https://media.tenor.com/kglDzTqoEUAAAAAM/maxwell-cat.gif')
+}
+
+function seal_A(){
+  add_Image('https://i.ytimg.com/vi/5VDg9Gj0Uj4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBbtPfatnlffJEiqlFtQ0Ozq_HaIw')
 }
 
 function add_Image(url) {
